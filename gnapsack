@@ -46,7 +46,7 @@ void Gknapsack() {
             }
         }
         
-        if (k == -1) break; // If no item found, break the loop
+        if (k == -1) break;
         
         if (m1 >= w[k]) {
             sol[k] = 1;
