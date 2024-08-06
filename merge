@@ -24,7 +24,7 @@ void merge(int arr[], int l, int m, int r) {
 
     i = 0;
     j = 0;
-    k = l; // Initialize k to the start of the merge range
+    k = l; 
 
     while (i < n1 && j < n2) {
         if (L[i] <= R[j]) {
@@ -54,7 +54,7 @@ void merge(int arr[], int l, int m, int r) {
 
 void mergesort(int arr[], int l, int r) {
     if (l < r) {
-        int m = l + (r - l) / 2; // Correct calculation of midpoint
+        int m = l + (r - l) / 2;
         mergesort(arr, l, m);
         mergesort(arr, m + 1, r);
         merge(arr, l, m, r);
@@ -64,8 +64,7 @@ void mergesort(int arr[], int l, int r) {
 int main() {
     int n;
     double cpu_time_used, tottime = 0;
-    srand(time(NULL)); // Seed for random number generation
-
+    srand(time(NULL)); 
     for (n = 5000; n <= 100000; n += 5000) {
         int* arr = (int*)malloc(n * sizeof(int));
         genrandm(arr, n);
